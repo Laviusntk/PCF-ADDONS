@@ -1,0 +1,1 @@
+control to generate store qr code image from a field
