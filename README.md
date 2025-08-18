@@ -1,4 +1,7 @@
 <h1 align="center">Power Platform Addons</h1>
+
+![PCF BG](img/pcfbg.png)
+
 <p align="center">
 Power Platform Model Driven and Canvas App Custom Addons
 </p>
