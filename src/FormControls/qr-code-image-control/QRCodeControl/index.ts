@@ -2,11 +2,23 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
 export class QRCodeControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
+    private mainDiv: HTMLDivElement;
+    private imageControl: HTMLImageElement;
+    private outputLabel: HTMLLabelElement;
+    private refreshButton: HTMLButtonElement;
+    
     /**
      * Empty constructor.
      */
     constructor()
     {
+
+    }
+
+    private _notifyOutputChangedCallback: () => void;
+    private _context: ComponentFramework.Context<IInputs>; 
+
+    public _initializeControlElements(): void {
 
     }
 
@@ -24,7 +36,9 @@ export class QRCodeControl implements ComponentFramework.StandardControl<IInputs
         state: ComponentFramework.Dictionary,
         container:HTMLDivElement): void
     {
-        // Add control initialization code
+        this._notifyOutputChangedCallback = notifyOutputChanged;
+        this._context = context;
+        this._initializeControlElements();
     }
 
 
