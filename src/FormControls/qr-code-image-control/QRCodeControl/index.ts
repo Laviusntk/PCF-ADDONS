@@ -7,9 +7,6 @@ export class QRCodeControl implements ComponentFramework.StandardControl<IInputs
     private outputLabel: HTMLLabelElement;
     private refreshButton: HTMLButtonElement;
     
-    /**
-     * Empty constructor.
-     */
     constructor()
     {
 
